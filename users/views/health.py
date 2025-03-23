@@ -1,6 +1,7 @@
+from flask import request, jsonify
 from users import app
 
 
-@app.route("/")
+@app.route("/ping", methods=['GET'])
 def hello_world():
-    return "<p>Hello, World!</p>"
+    return jsonify({'message': 'pong'})
