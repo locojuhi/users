@@ -1,0 +1,21 @@
+name: First WorkFlow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  my_first_job:
+    name: first job for this first workflow
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print greeting
+        run: |
+          echo "Hello World"
+      - name: Print goodbye
+        run: |
+          echo "Goodbye World"
